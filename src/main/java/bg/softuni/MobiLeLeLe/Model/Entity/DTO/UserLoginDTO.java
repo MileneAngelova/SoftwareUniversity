@@ -14,12 +14,20 @@ public class UserLoginDTO {
         return this;
     }
 
-    public String getRawPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public UserLoginDTO setRawPassword(String rawPassword) {
-        this.password = rawPassword;
+    public UserLoginDTO setPassword(String password) {
+        this.password = password;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "UserLoginDTO{" +
+                "username='" + username + '\'' +
+                ", password='" + (password != null ? "[PROVIDED]" : null) + '\'' +
+                '}';
     }
 }
