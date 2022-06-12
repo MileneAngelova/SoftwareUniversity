@@ -2,15 +2,15 @@ package bg.softuni.MobiLeLeLe.Model.Entity.DTO;
 
 public class UserLoginDTO {
 
-    private String username;
+    private String email;
     private String password;
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public UserLoginDTO setUsername(String username) {
-        this.username = username;
+    public UserLoginDTO setEmail(String email) {
+        this.email = email;
         return this;
     }
 
@@ -26,7 +26,7 @@ public class UserLoginDTO {
     @Override
     public String toString() {
         return "UserLoginDTO{" +
-                "username='" + username + '\'' +
+                "username='" + email + '\'' +
                 ", password='" + (password != null ? "[PROVIDED]" : null) + '\'' +
                 '}';
     }
