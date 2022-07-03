@@ -1,4 +1,4 @@
-package bg.softuni.MobiLeLeLe.web;
+package bg.softuni.MobiLeLeLe.web.userControllers;
 
 import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserRegisterDTO;
 import bg.softuni.MobiLeLeLe.service.UserService;
@@ -44,7 +44,7 @@ public class RegistrationController {
 ;
             return "redirect:/users/register";
         }
-        userService.registerAndLogin(userModel);
+        this.userService.registerAndLogin(userModel);
         return "redirect:/";
     }
 }

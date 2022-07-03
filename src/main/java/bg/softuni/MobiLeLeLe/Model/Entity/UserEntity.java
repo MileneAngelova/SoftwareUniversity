@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User extends BaseEntity{
+public class UserEntity extends BaseEntity{
 
     private String username;
 
@@ -30,14 +30,14 @@ public class User extends BaseEntity{
     @Column(name = "image_url")
     private String imageUrl;
 
-    public User() {
+    public UserEntity() {
     }
 
     public String getUsername() {
         return username;
     }
 
-    public User setUsername(String username) {
+    public UserEntity setUsername(String username) {
         this.username = username;
         return this;
     }
@@ -46,7 +46,7 @@ public class User extends BaseEntity{
         return password;
     }
 
-    public User setPassword(String password) {
+    public UserEntity setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -55,7 +55,7 @@ public class User extends BaseEntity{
         return email;
     }
 
-    public User setEmail(String email) {
+    public UserEntity setEmail(String email) {
         this.email = email;
         return this;
     }
@@ -64,7 +64,7 @@ public class User extends BaseEntity{
         return firstName;
     }
 
-    public User setFirstName(String firstName) {
+    public UserEntity setFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
@@ -73,7 +73,7 @@ public class User extends BaseEntity{
         return lastName;
     }
 
-    public User setLastName(String lastName) {
+    public UserEntity setLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
@@ -82,7 +82,7 @@ public class User extends BaseEntity{
         return isActive;
     }
 
-    public User setActive(boolean active) {
+    public UserEntity setActive(boolean active) {
         isActive = active;
         return this;
     }
@@ -91,7 +91,7 @@ public class User extends BaseEntity{
         return userRoles;
     }
 
-    public User setUserRoles(List<UserRole> userRoles) {
+    public UserEntity setUserRoles(List<UserRole> userRoles) {
         this.userRoles = userRoles;
         return this;
     }
@@ -100,12 +100,12 @@ public class User extends BaseEntity{
         return imageUrl;
     }
 
-    public User setImageUrl(String imageUrl) {
+    public UserEntity setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public User addRole(UserRole userRole) {
+    public UserEntity addRole(UserRole userRole) {
         this.userRoles.add(userRole);
         return this;
     }

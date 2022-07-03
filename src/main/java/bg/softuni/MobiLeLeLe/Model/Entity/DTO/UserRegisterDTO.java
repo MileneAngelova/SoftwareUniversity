@@ -1,12 +1,21 @@
 package bg.softuni.MobiLeLeLe.Model.Entity.DTO;
 
 
+import bg.softuni.MobiLeLeLe.Model.validation.FieldMatch;
+import bg.softuni.MobiLeLeLe.Model.validation.UniqueUserEmail;
+
 import javax.validation.constraints.*;
 
+@FieldMatch(
+        first = "password",
+        second = "confirmPassword",
+        message = "Passwords do not match."
+)
 public class UserRegisterDTO {
 
-    @NotBlank
-    @Email
+    @NotEmpty(message = "User email should be provided.")
+    @Email(message = "Email should be valid.")
+    @UniqueUserEmail(message = "Email should be unique.")
     private String email;
 
     @NotBlank
@@ -17,9 +26,9 @@ public class UserRegisterDTO {
     @Size(min = 2, max = 20)
     private String lastName;
 
-    @Min(5)
+    @NotEmpty
+    @Size(min = 5)
     private String password;
-
 
     private String confirmPassword;
 

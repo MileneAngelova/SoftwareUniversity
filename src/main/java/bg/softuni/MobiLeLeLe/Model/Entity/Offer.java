@@ -39,9 +39,9 @@ public class Offer extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "seller_id")
     private
-    User seller;
+    UserEntity seller;
 
-    public User getSeller() {
+    public UserEntity getSeller() {
         return seller;
     }
 
@@ -52,7 +52,7 @@ public class Offer extends BaseEntity{
     public Offer() {
     }
 
-    public Offer(String description, EngineEnum engine, String imageUrl, int mileage, BigDecimal price, TransmissionEnum transmission, int year, Model model, User seller) {
+    public Offer(String description, EngineEnum engine, String imageUrl, int mileage, BigDecimal price, TransmissionEnum transmission, int year, Model model, UserEntity seller) {
         this.description = description;
         this.engine = engine;
         this.imageUrl = imageUrl;
@@ -124,7 +124,7 @@ public class Offer extends BaseEntity{
         this.model = model;
     }
 
-    public void setSeller(User seller) {
+    public void setSeller(UserEntity seller) {
         this.seller = seller;
     }
 

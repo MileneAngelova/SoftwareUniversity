@@ -1,4 +1,4 @@
-package bg.softuni.MobiLeLeLe.web;
+package bg.softuni.MobiLeLeLe.web.userControllers;
 
 import bg.softuni.MobiLeLeLe.service.UserService;
 import org.springframework.stereotype.Controller;

@@ -2,11 +2,13 @@ package bg.softuni.MobiLeLeLe.service;
 
 import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserLoginDTO;
 import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserRegisterDTO;
-import bg.softuni.MobiLeLeLe.Model.Entity.User;
+import bg.softuni.MobiLeLeLe.Model.Entity.UserEntity;
+import bg.softuni.MobiLeLeLe.Model.mapper.UserMapper;
 import bg.softuni.MobiLeLeLe.repository.UserRepository;
 import bg.softuni.MobiLeLeLe.user.CurrentUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -15,20 +17,22 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 
-    private UserRepository userRepository;
-    private CurrentUser currentUser;
-    private PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final CurrentUser currentUser;
+    private final PasswordEncoder passwordEncoder;
+    private final UserMapper userMapper;
 
-    public UserService(UserRepository userRepository, CurrentUser currentUser, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, CurrentUser currentUser, PasswordEncoder passwordEncoder, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.currentUser = currentUser;
         this.passwordEncoder = passwordEncoder;
+        this.userMapper = userMapper;
     }
 
     public boolean login(UserLoginDTO loginDTO) {
-        Optional<User> optUser = userRepository.findByEmail(loginDTO.getEmail());
+        Optional<UserEntity> optUser = userRepository.findByEmail(loginDTO.getEmail());
 
         if (optUser.isEmpty()) {
             LOGGER.info("User[{}] not found!", loginDTO.getEmail());
@@ -47,7 +51,7 @@ public class UserService {
         return success;
     }
 
-    private void login(User user) {
+    private void login(UserEntity user) {
         currentUser.setLoggedIn(true)
                 .setName(user.getFirstName() + " " + user.getLastName());
     }
@@ -58,13 +62,11 @@ public class UserService {
 
     public void registerAndLogin(UserRegisterDTO userRegisterDTO) {
 
-        User newUser = new User().setActive(true).setEmail(userRegisterDTO.getEmail())
-                .setFirstName(userRegisterDTO.getFirstName())
-                .setLastName(userRegisterDTO.getLastName())
-                .setPassword(passwordEncoder.encode(userRegisterDTO.getPassword()));
+        UserEntity newUser = userMapper.userDtoToUserEntity(userRegisterDTO);
+        newUser.setPassword(passwordEncoder.encode(userRegisterDTO.getPassword()));
 
-        newUser = userRepository.save(newUser);
+            this.userRepository.save(newUser);
+            login(newUser);
 
-        login(newUser);
     }
 }
