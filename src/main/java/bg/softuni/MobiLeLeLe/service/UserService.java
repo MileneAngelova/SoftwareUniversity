@@ -16,6 +16,7 @@ import java.util.Optional;
 public class UserService {
 
     private Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+
     private UserRepository userRepository;
     private CurrentUser currentUser;
     private PasswordEncoder passwordEncoder;
@@ -61,6 +62,7 @@ public class UserService {
                 .setFirstName(userRegisterDTO.getFirstName())
                 .setLastName(userRegisterDTO.getLastName())
                 .setPassword(passwordEncoder.encode(userRegisterDTO.getPassword()));
+
         newUser = userRepository.save(newUser);
 
         login(newUser);

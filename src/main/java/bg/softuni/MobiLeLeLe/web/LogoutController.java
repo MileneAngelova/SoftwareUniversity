@@ -3,8 +3,10 @@ package bg.softuni.MobiLeLeLe.web;
 import bg.softuni.MobiLeLeLe.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/users")
 public class LogoutController {
 
     private UserService userService;
@@ -13,9 +15,9 @@ public class LogoutController {
         this.userService = userService;
     }
 
-    @GetMapping("/users/logout")
+    @GetMapping("/logout")
     public String logout() {
         userService.logout();
-        return "index";
+        return "redirect:/";
     }
 }
