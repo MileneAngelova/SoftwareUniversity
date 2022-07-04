@@ -1,4 +1,4 @@
-package bg.softuni.MobiLeLeLe.Model.Entity.Enum;
+package bg.softuni.MobiLeLeLe.Model.Enum;
 
 public enum CategoryEnum {
 

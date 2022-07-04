@@ -1,6 +1,6 @@
 package bg.softuni.MobiLeLeLe.web.userControllers;
 
-import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserLoginDTO;
+import bg.softuni.MobiLeLeLe.Model.DTO.UserLoginDTO;
 import bg.softuni.MobiLeLeLe.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

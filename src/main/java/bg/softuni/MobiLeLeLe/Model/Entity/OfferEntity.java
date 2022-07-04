@@ -1,14 +1,14 @@
 package bg.softuni.MobiLeLeLe.Model.Entity;
 
-import bg.softuni.MobiLeLeLe.Model.Entity.Enum.EngineEnum;
-import bg.softuni.MobiLeLeLe.Model.Entity.Enum.TransmissionEnum;
+import bg.softuni.MobiLeLeLe.Model.Enum.EngineEnum;
+import bg.softuni.MobiLeLeLe.Model.Enum.TransmissionEnum;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "offers")
-public class Offer extends BaseEntity{
+public class OfferEntity extends BaseEntity{
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
@@ -34,7 +34,7 @@ public class Offer extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "model_id")
-    private Model model;
+    private ModelEntity model;
 
     @ManyToOne
     @JoinColumn(name = "seller_id")
@@ -45,14 +45,14 @@ public class Offer extends BaseEntity{
         return seller;
     }
 
-    public Model getModel() {
+    public ModelEntity getModel() {
         return model;
     }
 
-    public Offer() {
+    public OfferEntity() {
     }
 
-    public Offer(String description, EngineEnum engine, String imageUrl, int mileage, BigDecimal price, TransmissionEnum transmission, int year, Model model, UserEntity seller) {
+    public OfferEntity(String description, EngineEnum engine, String imageUrl, int mileage, BigDecimal price, TransmissionEnum transmission, int year, ModelEntity model, UserEntity seller) {
         this.description = description;
         this.engine = engine;
         this.imageUrl = imageUrl;
@@ -120,7 +120,7 @@ public class Offer extends BaseEntity{
         this.year = year;
     }
 
-    public void setModel(Model model) {
+    public void setModel(ModelEntity model) {
         this.model = model;
     }
 

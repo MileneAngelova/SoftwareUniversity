@@ -1,4 +1,4 @@
-package bg.softuni.MobiLeLeLe.Model.Entity.DTO;
+package bg.softuni.MobiLeLeLe.Model.DTO;
 
 public class UserLoginDTO {
 

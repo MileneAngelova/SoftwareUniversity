@@ -7,26 +7,26 @@ import java.util.List;
 
 @Entity
 @Table(name = "brands")
-public class Brand extends BaseEntity {
+public class BrandEntity extends BaseEntity {
 
     @Column(nullable = false, unique = true)
     private String name;
 
     @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Model> models = new ArrayList<>();
+    private List<ModelEntity> models = new ArrayList<>();
 
-    public List<Model> getModels() {
+    public List<ModelEntity> getModels() {
         return models;
     }
 
-    public void setModels(List<Model> models) {
+    public void setModels(List<ModelEntity> models) {
         this.models = models;
     }
 
-    public Brand() {
+    public BrandEntity() {
     }
 
-    public Brand(String name) {
+    public BrandEntity(String name) {
 
         this.name = name;
     }
@@ -35,7 +35,7 @@ public class Brand extends BaseEntity {
         return name;
     }
 
-    public Brand setName(String name) {
+    public BrandEntity setName(String name) {
         this.name = name;
         return this;
     }

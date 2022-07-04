@@ -1,4 +1,4 @@
-package bg.softuni.MobiLeLeLe.Model.Entity.DTO;
+package bg.softuni.MobiLeLeLe.Model.DTO;
 
 
 import bg.softuni.MobiLeLeLe.Model.validation.FieldMatch;

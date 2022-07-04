@@ -1,14 +1,13 @@
 package bg.softuni.MobiLeLeLe.service;
 
-import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserLoginDTO;
-import bg.softuni.MobiLeLeLe.Model.Entity.DTO.UserRegisterDTO;
+import bg.softuni.MobiLeLeLe.Model.DTO.UserLoginDTO;
+import bg.softuni.MobiLeLeLe.Model.DTO.UserRegisterDTO;
 import bg.softuni.MobiLeLeLe.Model.Entity.UserEntity;
 import bg.softuni.MobiLeLeLe.Model.mapper.UserMapper;
 import bg.softuni.MobiLeLeLe.repository.UserRepository;
 import bg.softuni.MobiLeLeLe.user.CurrentUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

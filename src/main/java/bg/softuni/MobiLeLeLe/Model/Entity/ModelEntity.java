@@ -1,13 +1,13 @@
 package bg.softuni.MobiLeLeLe.Model.Entity;
 
-import bg.softuni.MobiLeLeLe.Model.Entity.Enum.CategoryEnum;
+import bg.softuni.MobiLeLeLe.Model.Enum.CategoryEnum;
 
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "models")
-public class Model extends BaseEntity{
+public class ModelEntity extends BaseEntity{
 
     @Column(nullable = false)
     private String name;
@@ -27,16 +27,16 @@ public class Model extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "brand_id")
-    private Brand brand;
+    private BrandEntity brand;
 
-    public Brand getBrand() {
+    public BrandEntity getBrand() {
         return brand;
     }
 
-    public Model() {
+    public ModelEntity() {
     }
 
-    public Model(String name, CategoryEnum category, String imageUrl, int startYear, int endYear, Brand brand) {
+    public ModelEntity(String name, CategoryEnum category, String imageUrl, int startYear, int endYear, BrandEntity brand) {
         this.name = name;
         this.category = category;
         this.imageUrl = imageUrl;
@@ -49,7 +49,7 @@ public class Model extends BaseEntity{
         return name;
     }
 
-    public Model setName(String name) {
+    public ModelEntity setName(String name) {
         this.name = name;
         return this;
     }
@@ -58,7 +58,7 @@ public class Model extends BaseEntity{
         return category;
     }
 
-    public Model setCategory(CategoryEnum category) {
+    public ModelEntity setCategory(CategoryEnum category) {
         this.category = category;
         return this;
     }
@@ -67,7 +67,7 @@ public class Model extends BaseEntity{
         return imageUrl;
     }
 
-    public Model setImageUrl(String imageUrl) {
+    public ModelEntity setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
@@ -76,7 +76,7 @@ public class Model extends BaseEntity{
         return startYear;
     }
 
-    public Model setStartYear(int startYear) {
+    public ModelEntity setStartYear(int startYear) {
         this.startYear = startYear;
         return this;
     }
@@ -85,12 +85,12 @@ public class Model extends BaseEntity{
         return endYear;
     }
 
-    public Model setEndYear(int endYear) {
+    public ModelEntity setEndYear(int endYear) {
         this.endYear = endYear;
         return this;
     }
 
-    public Model setBrand(Brand brand) {
+    public ModelEntity setBrand(BrandEntity brand) {
         this.brand = brand;
         return this;
     }
