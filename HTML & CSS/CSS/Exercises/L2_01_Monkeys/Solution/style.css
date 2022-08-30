@@ -1,0 +1,32 @@
+body {
+    background: #FAEBC8;
+    font-family: Helvetica, sans-serif;
+}
+
+section {
+    background-color: white;
+    display: inline-flex;
+    width: 56%;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+section h2 {
+    text-align: center;
+}
+
+section img {
+    width: 40%;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+section article {
+    display: inline-block;
+    padding: 38px;
+    width: 50%;
+}
+
+.Author {
+    font-style: italic;
+}

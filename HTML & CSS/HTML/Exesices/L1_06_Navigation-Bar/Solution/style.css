@@ -1,0 +1,21 @@
+nav ul {
+text-align: center;
+margin: 0;
+padding: 20px;
+background-color: #D7D4CF;
+}
+
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2AA23C;
+    text-decoration: #009926;
+    padding: 15px;
+}
+
+a:hover {
+    background-color: #2AA23C;
+    color: white;
+}
