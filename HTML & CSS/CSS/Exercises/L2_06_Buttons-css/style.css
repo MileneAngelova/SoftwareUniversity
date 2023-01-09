@@ -1,0 +1,55 @@
+body {
+    background-color: #EEEEEE;
+    border: 1px solid black;
+    width: 41%;
+    padding: 7% 0%;
+    font-family: Sentinel;
+    margin-left: 25%;
+    outline-style: none;}
+
+section {
+    padding-left: 12%;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+button {
+    border-radius: 15px;
+    height: 33px;
+    width: 105px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button.fill, button.fill a {
+    background-color: black;
+    color: white;
+}
+
+div.dynamic button.hover {
+    background-color: black;
+    color: white;
+}
+
+i {
+    color: white;
+    position: relative;
+    padding-right: 3px;
+}
+
+div.dynamic button.hover:hover {
+    background-color: green;
+    border-color: green;
+}
+
+div#light button.hover:hover {
+    color: green;
+    border-color: green;
+}
