@@ -1,0 +1,46 @@
+.viewport {
+    height: 50vh;
+    position: relative;
+}
+
+.card {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div:first-child {
+    background: linear-gradient(to right, #005C95, #00CFA0);
+}
+
+div:last-child {
+    background: linear-gradient(to right, #BF2A6B, #E67B00);
+}
+
+.sunset {
+    height: 131px;
+    width: 231px;
+}
+
+.mountain {
+    height: 349px;
+    width: 231px;
+}
+
+section i {
+    position: absolute;
+    color: white;
+}
+
+div:first-child i {
+    top: 105px;
+    left: 205px;
+}
+
+div:last-child i {
+    top: 325px;
+    left: 205px;
+ }
+
