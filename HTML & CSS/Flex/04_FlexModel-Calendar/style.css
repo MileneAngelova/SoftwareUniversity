@@ -1,0 +1,75 @@
+body {
+    box-sizing: border-box;
+}
+
+div, section {
+    display: flex;
+    align-items: center;
+}
+
+div {
+    max-width: 65vw;
+    margin: 50px 400px;
+}
+
+section {
+    flex-wrap:wrap;
+}
+
+span {
+    border: 1px solid black;
+    padding: 15px;
+    justify-content: center;
+}
+
+.week {
+    flex-direction: row;
+    width: 615px;
+}
+
+.week span {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.week :first-child {
+    width: 583px;
+    height: 70px;
+    align-content: flex-start;
+}
+
+.week :nth-child(2), .week :nth-child(3),
+.week :nth-child(4), .week :nth-child(5), .week :nth-child(6) {
+    width: 91px;
+    height: 60px;
+}
+
+.week :nth-child(7){
+    width: 583px;
+    height: 70px;
+    align-content: flex-start;
+}
+
+.week :nth-child(8), .week :nth-child(9) {
+    width: 275px;
+    height: 60px;
+}
+
+.week :nth-child(9) {
+    width: 276px;
+}
+
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    width: 151px;
+}
+
+.notes span {
+    display: flex;
+    width: 119px;
+    height: 162px;
+    flex-wrap: wrap;
+}
