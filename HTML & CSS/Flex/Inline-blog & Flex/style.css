@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(238, 238, 238);
+    margin: 80 auto;
+}
+
+.cards-layout {
+    width: 60%;
+    margin: 50px auto;
+}
+
+section {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3rem;
+    column-count: 3;
+}
+
+.masonry .card {
+    display: inline-block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px gray;
+    margin: 15px 5px;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer {
+    border-top: 1px solid lightgray;
+    padding: 28px;
+}
+
+.flex section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex .card {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+}
+
+.flex .card-content {
+    flex-grow: 1;
+}
+
