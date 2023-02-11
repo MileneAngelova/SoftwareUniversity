@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital@1&family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Raleway:ital@1&family=Roboto:wght@100;300&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0 8%;
+}
+
+h1,
+.image-heading {
+    font-family: Abril Fatface;
+    font-size: 23px;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.image-aside p::before {
+    position: absolute;
+    content: "";
+    background-color: whitesmoke;
+    width: 62%;
+    height: 2px;
+    bottom: 46px;
+    font-size: 12px;
+}
+
+
+.image {
+    width: 100%;
+    position: relative;
+    height: 1010px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.image-aside {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    height: 140px;
+    width: 170px;
+    border: 1px solid #C9C7C6;
+    box-shadow: 1px 0px 5px 1px grey;
+    padding-left: 10px;
+}
+
+.image-aside p {
+    font-size: 12px;
+}
+
+section {
+    width: 80%;
+}
+
+.image-text {
+    font-size: small;
+    position: absolute;
+    right: 36px;
+    top: 28%;
+    height: 260px;
+    width: 252px;
+    background: linear-gradient(to right, #A29184, #C9C7C6);
+    text-align: right;
+    padding-right: 15px;
+    box-shadow: 1px 0px 5px 1px grey;
+    padding-top: 20px;
+    line-height: 20px;
+}
+
+.image-text p {
+    position: relative;
+    color: white;
+}
+
+.image-text i {
+    width: 7px;
+    height: 20px;
+    background-color: #908279;
+    margin-top: 22px;
+    margin-right: 3px;
+    box-shadow: 2px 2px 2px 1px #65564c;
+}
+
+.info {
+    position: relative;
+    background-color: #F3F0F1;
+    width: 80%;
+    top: 0px;
+}
+
+.info-description,
+.contacts {
+    padding: 2% 8%;
+}
+
+.contact {
+    margin-top: 90px;
+    margin-bottom: 0px;
+}
+
+.info-description p {
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.info-description span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info-description i {
+    margin-right: 10px;
+}
+
+hr {
+    margin-top: -15px;
+}
+
+.contacts {
+    padding-top: 0px;
+    width: 85%;
+}
+
+.contacts,
+.description {
+    color: #3c4040;
+}
+
+.contacts p {
+    margin: 7px;
+    padding-right: 20px;
+    display: inline-block;
+}
+
+.contacts p::first-letter {
+    font-weight: bold;
+}
+
+.snipp {
+    position: absolute;
+    background-color: #C1AFA6;
+    left: 100%;
+    top: 0%;
+    width: 25%;
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.snipp-heading {
+    font-size: 50px;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+
+.snipp-text {
+    text-transform: uppercase;
+    box-sizing: border-box;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.input {
+    margin-top: 25px;
+}
+
+input {
+    background-color: #c1afa6;
+    height: 35px;
+    width: 45%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #cec2b9;
+    color: white;
+}
+
+::placeholder,
+button {
+    color: white;
+}
+
+button {
+    height: 35px;
+    width: 15%;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #63754B;
+    border: 1px solid #c4c6b2;
+    margin-left: 5px;
+}
