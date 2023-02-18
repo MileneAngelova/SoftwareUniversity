@@ -1,0 +1,105 @@
+@media all and (max-width: 600px) {
+
+    .hero-btns,
+    .container,
+    .container-fluid,
+    #about-us,
+    col-12.col-sm-12.col-lg-4.service-txt,
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-fluid {
+        gap: 30px;
+    }
+
+    .navbar {
+        padding: 20px 0 0 0;
+    }
+
+    .hero h1, .row h2 {
+        margin-top: 30px;
+    }
+
+    h1,
+    h2, h5, p, .hero-btns {
+        text-align: center;
+    }
+
+    .hero p {
+        width: 95%;
+    }
+
+    .hero-btns {
+        margin-bottom: 50px;
+        align-items: center;
+        width: 95%;
+    }
+
+    .hero-btns a:first-child,
+    hero-btns.service-btn a {
+        width: 70%;
+    }
+
+    .col-12 col-sm-6 col-lg-4 {
+        margin-bottom: 40px;
+    }
+
+    .services {
+        padding: 0px;
+    }
+
+    .row {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .service-box {
+        margin: 20px;
+    }
+
+    .service-box {
+        margin: 30px;
+        padding: 20px 45px;
+    }
+
+    .col-12.col-sm-12.col-lg-6 {
+        margin-top: 85px;
+    }
+
+    .about {
+        margin-bottom: 0px;
+
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+
+    .about p {
+        margin: 0 auto;
+    text-align: center;
+    width: 79%;
+    }
+
+    #message {
+        height: 140px;
+        margin-top: 0px;
+    }
+
+    .hero-btns.contact-btn {
+display: none;
+    }
+
+    footer h3 {
+        width: 95%;
+    }
+
+    .contact-nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
