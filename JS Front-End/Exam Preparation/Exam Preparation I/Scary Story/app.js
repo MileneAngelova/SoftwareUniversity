@@ -82,17 +82,16 @@ function solve() {
                 storyGenre.value = genrePreview.textContent.split(': ')[1];
                 storyText.value = textPreview.textContent;
 
-                li.remove();
+                previewList.removeChild(li);
                 publishBtn.disabled = false;
 
             }
             deleteBtn.addEventListener('click', deleteStory);
 
             function deleteStory() {
-                li.remove();
+                previewList.removeChild(li);
                 publishBtn.disabled = false;
             }
         }
     }
-
 }
