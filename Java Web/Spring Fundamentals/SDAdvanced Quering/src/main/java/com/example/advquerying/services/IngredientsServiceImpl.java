@@ -39,4 +39,10 @@ public class IngredientsServiceImpl implements IngredientsService {
     public void increasePriceByPercent(double percent) {
         ingredientsRepository.increasePriceByPercent(BigDecimal.valueOf(percent));
     }
+
+        @Override
+    @Transactional
+    public void updatePriceByListProvided(Set<String> ingredients) {
+    ingredientsRepository.updatePriceByGivenNames(ingredients);
+    }
 }
