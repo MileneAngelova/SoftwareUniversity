@@ -14,14 +14,10 @@ import java.util.Scanner;
 
 @Component
 public class ApplicationRunner implements CommandLineRunner {
-    private final ShampooRepository shampooRepository;
-    private final IngredientsRepository ingredientsRepository;
     private final IngredientsService ingredientsService;
     private final ShampooService shampooService;
 
-    public ApplicationRunner(ShampooRepository shampooRepository, IngredientsRepository ingredientsRepository, IngredientsService ingredientsService, ShampooService shampooService) {
-        this.shampooRepository = shampooRepository;
-        this.ingredientsRepository = ingredientsRepository;
+    public ApplicationRunner(IngredientsService ingredientsService, ShampooService shampooService) {
         this.ingredientsService = ingredientsService;
         this.shampooService = shampooService;
     }
@@ -35,50 +31,7 @@ public class ApplicationRunner implements CommandLineRunner {
 //        ingredientsService.selectInGivenList(List.of("Lavender", "Herbs", "Apple"));
 //        shampooService.selectByCountIngredients(2);
 //        ingredientsService.deleteByName("Nettle");
-        ingredientsService.increasePriceByPercent(0.1);
+//        ingredientsService.increasePriceByPercent(0.1);
+          ingredientsService.updatePriceByListProvided(Set.of("Berry", "Mineral-Collagen"));
     }
-
-//    private void demo() {
-//        Scanner scanner = new Scanner(System.in);
-//
-//                BigDecimal price = scanner.nextBigDecimal();
-//
-//        List<Shampoo> byBrand = this.shampooRepository.findByBrand("Swiss Green Apple & Nettle");
-//        byBrand.forEach(s -> System.out.printf("%s  - %.2f%n", s.getBrand(), s.getPrice()));
-//
-//        List<Shampoo> byBrandAndSize =
-//                this.shampooRepository.findByBrandAndSizeOrderByBrand("Active-Caffeine", Size.SMALL);
-//        byBrandAndSize.forEach(s -> System.out.println(s.getId()));
-//
-//        List<Shampoo> bySize = this.shampooRepository.findBySizeOrderById(Size.MEDIUM);
-//        bySize.forEach(s -> System.out.printf("%d %s %s - %.2flv.%n", s.getId(), s.getBrand(), s.getSize(), s.getPrice()));
-//
-//        List<Shampoo> byPriceGreaterThan = this.shampooRepository.findAllByPriceGreaterThanOrderByPriceDesc(price);
-//
-//        byPriceGreaterThan.forEach(s -> System.out.printf("%s %s - %.2flv.%n", s.getBrand(), s.getSize().name(), s.getPrice()));
-//
-//        char letter = scanner.nextLine().charAt(0);
-//        List<Ingredient> byNameStartingWith = this.ingredientsRepository.findAllByNameStartingWith(letter);
-//
-//        if (!byNameStartingWith.isEmpty()) {
-//            byNameStartingWith.forEach(i -> System.out.println(i.getName()));
-//        } else {
-//            System.out.println("No ingredient starting with " + letter);
-//        }
-//
-//        int countByPriceLessThan = this.shampooRepository.countByPriceLessThan(price);
-//
-//      if (countByPriceLessThan > 0) {
-//          System.out.println(countByPriceLessThan);
-//      }
-//
-//        String first = scanner.nextLine();
-//        String second = scanner.nextLine();
-//
-//        Set<String> names = Set.of(first, second);
-//
-//        Set<Shampoo> byIngredientsName = this.shampooRepository.findByIngredientsName(names);
-//        byIngredientsName.forEach(s -> System.out.printf("%s %s %.2f%n",s.getBrand(), s.getSize().name(), s.getPrice()));
-//
-//    }
 }
