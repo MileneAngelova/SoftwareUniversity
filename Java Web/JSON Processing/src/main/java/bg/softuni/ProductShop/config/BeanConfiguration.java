@@ -28,4 +28,9 @@ public class BeanConfiguration {
     public ValidationUtil validationUtil() {
         return new ValidationUtilImpl();
     }
+
+    @Bean
+    public FileIOUtils fileIOUtils() {
+        return new FileIOUtilsImpl();
+    }
 }
